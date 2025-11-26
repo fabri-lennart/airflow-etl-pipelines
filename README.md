@@ -51,18 +51,7 @@ A production-ready Apache Airflow setup running on Docker with multiple ETL pipe
 
 ## 📊 Available Pipelines
 
-### 1. Weather ETL Pipeline
-**Files**: `01-ETLWeatherPrint.py`, `02-ETLWeatherPostgres.py`, `03-ETLWeatherPostgresAndPrint.py`
-
-Extracts weather data from external APIs, transforms it, and loads into PostgreSQL database.
-
-**Features**:
-- Real-time weather data extraction
-- Data validation and transformation
-- PostgreSQL integration
-- Error handling and retries
-
-### 2. Cryptocurrency Pipeline
+## Cryptocurrency Pipeline
 **File**: `CriptoPipeline.py`
 
 Fetches cryptocurrency prices from Coinlore API and processes Bitcoin data.
@@ -126,11 +115,6 @@ Airflow/
 ├── dags/                        # 🎯 Your DAG files go here
 │   ├── __pycache__/            # Python compiled files
 │   ├── CriptoPipeline.py       # Crypto ETL pipeline
-│   ├── 01-ETLWeatherPrint.py   # Weather pipeline v1
-│   ├── 02-ETLWeatherPostgres.py # Weather pipeline v2
-│   ├── 03-ETLWeatherPostgresAndPrint.py # Weather pipeline v3
-│   ├── SimpleHTTPOperator.py   # Custom HTTP operator
-│   └── transformer.py          # Utility functions
 ├── logs/                        # Execution logs
 │   ├── dag_id=<dag_name>/      # Logs per DAG
 │   │   └── run_id=<execution>/ # Logs per run
